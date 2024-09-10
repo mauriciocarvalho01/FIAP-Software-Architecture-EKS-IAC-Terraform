@@ -43,6 +43,7 @@ jobs:
     name: "Install External Secrets with Helm"
     runs-on: ubuntu-latest
     needs: terraform
+    if: github.ref == 'refs/heads/main'
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
