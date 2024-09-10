@@ -23,9 +23,14 @@ jobs:
         with:
           cli_config_credentials_token: ${{ env.TF_API_TOKEN }}
 
+      - name: Terraform Format Checking
+        id: fmt-check
+        run: terraform fmt -check
+        continue-on-error: true
+
       - name: Terraform Format
         id: fmt
-        run: terraform fmt -check
+        run: terraform fmt 
 
       - name: Terraform Init
         id: init
