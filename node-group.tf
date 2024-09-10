@@ -2,7 +2,7 @@ resource "aws_eks_node_group" "eks_node_group" {
   cluster_name    = aws_eks_cluster.eks_cluster.name
   node_group_name = "${var.cluster_name}-node-group"
   node_role_arn   = var.eks_node_role_arn
-  subnet_ids      = [
+  subnet_ids = [
     "subnet-0775fa37d5a4c6906",
     "subnet-0678dace08e7599fd",
     "subnet-08fc78f1aa116d03c",
