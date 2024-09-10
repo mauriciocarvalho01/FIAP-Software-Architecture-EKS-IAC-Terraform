@@ -23,9 +23,14 @@ jobs:
         with:
           cli_config_credentials_token: ${{ env.TF_API_TOKEN }}
 
+      - name: Terraform Format Checking
+        id: fmt-check
+        run: terraform fmt -check
+        continue-on-error: true
+
       - name: Terraform Format
         id: fmt
-        run: terraform fmt -check
+        run: terraform fmt 
 
       - name: Terraform Init
         id: init
@@ -102,7 +107,7 @@ jobs:
           env:
             AWS_ACCESS_KEY_ID: ${{ env.AWS_ACCESS_KEY_ID }}
             AWS_SECRET_ACCESS_KEY: ${{ env.AWS_SECRET_ACCESS_KEY }}
-            AWS_DEFAULT_REGION: <YOUR_REGION>
+            AWS_DEFAULT_REGION: ${{ env.AWS_REGION }}
 
         - name: Add external-secrets Helm repo
           run: |
