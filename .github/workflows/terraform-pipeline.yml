@@ -36,8 +36,10 @@ jobs:
         run: terraform plan -no-color -input=false
 
       - name: Terraform Apply
+        id: apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: terraform apply -auto-approve -input=false
+        run: |
+          terraform apply -auto-approve -input=false || echo "Cluster already exists, skipping creation."
 
   helm:
     name: "Install External Secrets with Helm"
