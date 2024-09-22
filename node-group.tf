@@ -7,7 +7,7 @@ resource "aws_eks_node_group" "eks_node_group" {
       "subnet-00d1d86211e2f89ae",
       "subnet-06559b6b476b01a93",
       "subnet-0cecdfd71a61d72b2",
-      "subnet-04b9b72b1513f9425"
+      "subnet-039d2e450f5eff642"
   ]
 
   scaling_config {
