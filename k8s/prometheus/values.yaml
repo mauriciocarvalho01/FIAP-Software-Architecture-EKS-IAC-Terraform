@@ -1241,7 +1241,7 @@ networkPolicy:
   enabled: false
 
 # Force namespace of namespaced resources
-forceNamespace: "fiap"
+forceNamespace: ""
 
 # Extra manifests to deploy as an array
 extraManifests: []
