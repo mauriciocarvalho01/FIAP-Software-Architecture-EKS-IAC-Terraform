@@ -3,11 +3,11 @@ resource "aws_eks_node_group" "eks_node_group" {
   node_group_name = "${var.cluster_name}-node-group"
   node_role_arn   = var.eks_node_role_arn
   subnet_ids = [
-      "subnet-0348ab87b994ab0c9",
-      "subnet-00d1d86211e2f89ae",
-      "subnet-06559b6b476b01a93",
-      "subnet-0cecdfd71a61d72b2",
-      "subnet-039d2e450f5eff642"
+      "subnet-0de6eab23c30e5cfe",
+      "subnet-01b2ac74a27022a20",
+      "subnet-04147ec367438c0af",
+      "subnet-04eb67317140ac026",
+      "subnet-075ea87e5f578d42c"
   ]
 
   scaling_config {
