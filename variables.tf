@@ -13,13 +13,13 @@ variable "cluster_name" {
 variable "eks_cluster_role_arn" {
   description = "ARN da Role IAM pré-existente para o cluster EKS"
   type        = string
-  default     = "arn:aws:iam::610703356069:role/LabRole"
+  default     = "arn:aws:iam::953307335642:role/LabRole"
 }
 
 variable "eks_node_role_arn" {
   description = "ARN da Role IAM pré-existente para os nós do EKS"
   type        = string
-  default     = "arn:aws:iam::610703356069:role/LabRole"
+  default     = "arn:aws:iam::953307335642:role/LabRole"
 }
 
 
