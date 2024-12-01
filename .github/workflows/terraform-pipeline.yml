@@ -121,6 +121,7 @@ jobs:
           kubectl apply -f k8s/mysql-volume.yaml
           kubectl apply -f k8s/rabbitmq-service.yaml
           kubectl apply -f k8s/rabbitmq.yaml
+          kubetcl apply -f k8s/external-secrets.yaml
 
       - name: Deploy Observability Resources
         run: |
