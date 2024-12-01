@@ -10,7 +10,7 @@ resource "aws_eks_cluster" "eks_cluster" {
         "subnet-04eb67317140ac026",
         "subnet-075ea87e5f578d42c"
     ]
-    security_group_ids = ["sg-0c3337007ad944347"]
+    security_group_ids = ["sg-0c3337007ad944347",  "sg-05ce8e8d8ed25babe"]
   }
 
 
